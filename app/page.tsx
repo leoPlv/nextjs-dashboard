@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       <main className="flex flex-1 flex-col p-6">
-        <div className="flex h-20 shrink-0 items-end rounded-lg bg-green-300 p-4 md:h-52 w-full text-black text-xl gap-4">
+        <div className="flex shrink-0 items-end rounded-lg bg-green-300 p-4 md:h-52 w-full text-black text-xl gap-4">
           <div className={styles.shape} />
           <h1 className="text-3xl">NextJs tuto</h1>
         </div>
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="row-start-3 flex h-6 flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex h-8 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
