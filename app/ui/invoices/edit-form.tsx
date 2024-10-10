@@ -10,7 +10,6 @@ import {
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
 import { editInvoice, State } from '@/app/lib/server-actions';
-import { useActionState } from 'react';
 import { useFormState } from 'react-dom';
 
 export default function EditInvoiceForm({
@@ -52,7 +51,7 @@ export default function EditInvoiceForm({
                         <UserCircleIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500" />
                     </div>
                     <div id="customer-error">
-                        {state.errors?.customerId?.map(err => <p>{err}</p>)}
+                        {state.errors?.customerId?.map(err => <p key={err}>{err}</p>)}
                     </div>
                 </div>
 
@@ -77,7 +76,7 @@ export default function EditInvoiceForm({
                         </div>
                     </div>
                     <div id="amount-error">
-                        {state.errors?.amount?.map(err => <p className="mt-2 text-sm text-red-500">{err}</p>)}
+                        {state.errors?.amount?.map(err => <p className="mt-2 text-sm text-red-500" key={err}>{err}</p>)}
                     </div>
                 </div>
 

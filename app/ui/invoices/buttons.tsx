@@ -1,9 +1,5 @@
-import { deleteInvoice } from '@/app/lib/server-actions';
-import { PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { PencilIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { useState } from 'react';
-import { createPortal } from 'react-dom';
-import { Button } from '../button';
 
 export function CreateInvoice() {
     return (

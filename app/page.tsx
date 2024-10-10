@@ -1,8 +1,7 @@
 import Image from "next/image";
 import styles from "@/app/ui/home.module.scss"
-import { Button } from "./ui/button";
 import Link from "next/link";
-import { ArrowRightEndOnRectangleIcon, ArrowRightIcon, FireIcon } from "@heroicons/react/24/outline";
+import { ArrowRightEndOnRectangleIcon, FireIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
