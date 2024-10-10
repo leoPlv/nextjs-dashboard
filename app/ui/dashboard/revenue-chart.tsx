@@ -1,6 +1,5 @@
 import { generateYAxis } from '@/app/lib/utils';
 import { bebas } from '@/app/ui/fonts';
-import { Revenue } from '@/app/lib/definitions';
 import { fetchRevenue } from '@/app/lib/data';
 
 // This component is representational only.

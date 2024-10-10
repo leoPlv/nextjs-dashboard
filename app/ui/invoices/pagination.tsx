@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { generatePagination } from '@/app/lib/utils';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
     // NOTE: Uncomment this code in Chapter 11
@@ -78,7 +79,7 @@ function PaginationNumber({
             'rounded-l-md': position === 'first' || position === 'single',
             'rounded-r-md': position === 'last' || position === 'single',
             'z-10 bg-blue-600 border-blue-600 text-white': isActive,
-            'hover:bg-gray-100': !isActive && position !== 'middle',
+            'hover:bg-gray-100 hover:text-black': !isActive && position !== 'middle',
             'text-gray-300': position === 'middle',
         },
     );
@@ -105,24 +106,24 @@ function PaginationArrow({
         'flex h-10 w-10 items-center justify-center rounded-md border',
         {
             'pointer-events-none text-gray-300': isDisabled,
-            'hover:bg-gray-100': !isDisabled,
+            'hover:bg-gray-100 hover:text-black': !isDisabled,
             'mr-2 md:mr-4': direction === 'left',
             'ml-2 md:ml-4': direction === 'right',
         },
     );
 
-    // const icon =
-    //     direction === 'left' ? (
-    //         <ArrowLeftIcon className="w-4" />
-    //     ) : (
-    //         <ArrowRightIcon className="w-4" />
-    //     );
+    const icon =
+        direction === 'left' ? (
+            <ArrowLeftIcon className="w-4" />
+        ) : (
+            <ArrowRightIcon className="w-4" />
+        );
 
     return isDisabled ? (
-        <div className={className}>page</div>
+        <div className={className}>{icon}</div>
     ) : (
         <Link className={className} href={href}>
-            page
+                {icon}
         </Link>
     );
 }
